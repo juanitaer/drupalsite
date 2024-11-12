@@ -1,0 +1,40 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+details:
+  js:
+    js/details.js: {}
+
+drupal.message:
+  css:
+    theme:
+      css/drupal.message.css: {}
+
+progress:
+  css:
+    theme:
+      css/progress.css: {}
+
+tabledrag:
+  js:
+    js/tabledrag.js: {}
+
+layout_discovery_section:
+  css:
+    theme:
+      css/layout_discovery.css: {}
+
+drupal.node.preview:
+  js:
+    js/node.preview.js: {}
+
+content_moderation:
+  css:
+    theme:
+      css/content_moderation.css: {}
+
+drupal.dialog:
+  js:
+    js/drupal.dialog.js: {}
