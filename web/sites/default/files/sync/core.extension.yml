@@ -46,4 +46,8 @@ module:
 theme:
   olivero: 0
   claro: 0
+  stable9: 0
+  tara: 0
+  thex: 0
+  vani: 0
 profile: standard

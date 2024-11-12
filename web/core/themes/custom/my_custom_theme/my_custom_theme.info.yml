@@ -1,0 +1,87 @@
+# This theme is marked as @internal. It is intended to evolve and change over
+# minor releases.
+# As the UI of Drupal improves between minor versions, the markup and assets in
+# the Olivero theme will change. The Olivero theme is not backwards compatible
+# If you wish to modify the output or assets of Olivero you can:
+# 1. Copy the whole of Olivero and rename it as your own theme. You will need to
+# manually manage your own updates if you want to stay up to date with Olivero's
+# bug fixes and feature support.
+#
+# 2. Sub-theme Olivero. This is only recommended if you want to make minor
+# tweaks and understand that Olivero could break your modifications as it
+# changes.
+name: My Custom Theme
+type: theme
+base theme: olivero
+description: 'A custom theme based on Olivero.'
+package: Custom
+version: VERSION
+libraries:
+  - my_custom_theme/global-styling
+
+regions:
+  header: Header
+  primary_menu: Primary menu
+  secondary_menu: Secondary menu
+  hero: Hero (full width)
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  sidebar: Sidebar
+  content_below: Content Below
+  footer_top: Footer Top
+  footer_bottom: Footer Bottom
+libraries-override:
+  core/drupal.ajax:
+    css:
+      component:
+        core/components/ajax-progress.module.css: css/components/ajax-progress.module.css
+  core/drupal.autocomplete:
+    css:
+      component:
+        core/components/autocomplete-loading.module.css: css/components/autocomplete-loading.module.css
+  system/admin:
+    css:
+      theme:
+        css/system.admin.css: false
+  core/drupal.checkbox: false
+  core/drupal.dropbutton:
+    css:
+      component:
+        misc/dropbutton/dropbutton.css: css/components/dropbutton.css
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        misc/vertical-tabs.css: css/components/vertical-tabs.css
+  media/oembed.formatter: false
+  layout_builder/twocol_section: my_custom_theme/layout_builder_twocol_section
+  layout_builder/threecol_section: my_custom_theme/layout_builder_threecol_section
+  layout_builder/fourcol_section: my_custom_theme/layout_builder_fourcol_section
+libraries-extend:
+  core/drupal.message:
+    - my_custom_theme/drupal.message
+  core/drupal.collapse:
+    - my_custom_theme/details
+  core/drupal.dialog:
+    - my_custom_theme/drupal.dialog
+  core/drupal.progress:
+    - my_custom_theme/progress
+  core/drupal.tabledrag:
+    - my_custom_theme/tabledrag
+  layout_discovery/onecol:
+    - my_custom_theme/layout_discovery_section
+  layout_discovery/twocol_bricks:
+    - my_custom_theme/layout_discovery_section
+  layout_discovery/twocol:
+    - my_custom_theme/layout_discovery_section
+  layout_discovery/threecol_25_50_25:
+    - my_custom_theme/layout_discovery_section
+  layout_discovery/threecol_33_34_33:
+    - my_custom_theme/layout_discovery_section
+  node/drupal.node.preview:
+    - my_custom_theme/drupal.node.preview
+  content_moderation/content_moderation:
+    - my_custom_theme/content_moderation
+
